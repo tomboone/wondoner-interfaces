@@ -10,10 +10,10 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
-    # Grant permissions for GitHub's OIDC token to be used with PyPI's Trusted Publishing
+    environment: pypi # <--- ADD THIS LINE
     permissions:
       id-token: write # IMPORTANT: Required for trusted publishing
+      contents: read
 
     steps:
     #----------------------------------------------
