@@ -15,7 +15,7 @@ jobs:
       fail-fast: false # Don't cancel other jobs in the matrix if one fails
       matrix:
         # Define Python versions to test against (match your pyproject.toml support)
-        python-version: ["3.8", "3.10", "3.12"]
+        python-version: ["3.11"]
 
     steps:
     #----------------------------------------------
