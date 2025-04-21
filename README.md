@@ -1,10 +1,10 @@
-# WonDoner Interfaces
+# Wondoner Interfaces
 
 ![PyPI - Version](https://img.shields.io/pypi/v/wondoner-interfaces) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This package provides the core interfaces, abstract base classes, and standard data models required for building plugin integrations for the **WonDoner** task aggregator. It defines the contract that all source plugins (like for Jira, GitHub, Todoist, etc.) must adhere to.
+This package provides the core interfaces, abstract base classes, and standard data models required for building plugin integrations for the **Wondoner** task aggregator. It defines the contract that all source plugins (like for Jira, GitHub, Todoist, etc.) must adhere to.
 
-This package is intended primarily for developers creating new plugins for WonDoner.
+This package is intended primarily for developers creating new plugins for Wondoner.
 
 ## Installation
 
@@ -52,10 +52,6 @@ class MyCoolSourcePlugin(TaskSourceIntegration):
         # Fetch task from source API and map to StandardTask
         pass
 
-    async def create_task(self, data_to_create: Dict[str, Any]) -> StandardTask:
-        # Create task in source API using provided data, return mapped StandardTask
-        pass
-
     async def update_task(self, source_task_id: str, changes: Dict[str, Any]) -> StandardTask:
         # Update task in source API based on changes, return mapped StandardTask
         pass
@@ -73,5 +69,5 @@ class MyCoolSourcePlugin(TaskSourceIntegration):
 
 Please refer to the source code within this package for detailed method signatures, docstrings, and model definitions.
 
-License
+## License
 This project is licensed under the MIT License - see the LICENSE file for details.

@@ -70,32 +70,6 @@ class TaskSourceIntegration(ABC):
         pass
 
     @abstractmethod
-    async def create_task(self, data_to_create: Dict[str, Any]) -> StandardTask:
-        """
-        Creates a new task in the source system based on provided standardized data.
-
-        Args:
-            data_to_create: A dictionary containing the initial values for the task,
-                            using standardized field names where possible (e.g., 'name',
-                            'description', 'due_date', 'status' (as TaskStatus enum)).
-                            It might also contain source-specific info derived from the
-                            aggregator's Project context if needed (e.g., a source
-                            project ID mapped from the aggregator's project_id).
-
-        Returns:
-            A StandardTask object representing the newly created task *as it exists
-            in the source system*, including its newly assigned 'source_id' and
-            any other fields populated by the source upon creation (e.g., created_at).
-
-        Raises:
-            Exception: If task creation fails in the source system (e.g., bad data,
-                       permissions error, API error). Specific exception types
-                       are recommended for better error handling.
-
-        """
-        pass
-
-    @abstractmethod
     async def update_task(self, source_task_id: str, changes: Dict[str, Any]) -> StandardTask:
         """
         Updates an existing task in the source system based on standardized changes.
