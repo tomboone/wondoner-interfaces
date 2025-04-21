@@ -23,7 +23,7 @@ def test_task_source_integration_cannot_instantiate():
     # You can keep the checks below as complementary verification
     # Check that the methods requiring overrides in subclasses are abstract
     abstract_methods = TaskSourceIntegration.__abstractmethods__
-    required_methods_for_concrete = {"get_task", "create_task", "update_task"}
+    required_methods_for_concrete = {"get_task", "update_task"}
 
     # Verify that the set of abstract methods includes all the ones we require
     assert abstract_methods.issuperset(required_methods_for_concrete)
@@ -45,9 +45,6 @@ class MinimalPlugin(TaskSourceIntegration):
 
     async def get_task(self, source_task_id: str) -> Optional[StandardTask]:
         raise NotImplementedError("Minimal get_task")  # Dummy implementation
-
-    async def create_task(self, data_to_create: Dict[str, Any]) -> StandardTask:
-        raise NotImplementedError("Minimal create_task")  # Dummy implementation
 
     async def update_task(self, source_task_id: str, changes: Dict[str, Any]) -> StandardTask:
         raise NotImplementedError("Minimal update_task")  # Dummy implementation
