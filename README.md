@@ -1,6 +1,6 @@
 # WonDoner Interfaces
 
-[![PyPI version](https://badge.fury.io/py/wondoner-interfaces.svg)](https://badge.fury.io/py/wondoner-interfaces) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![PyPI - Version](https://img.shields.io/pypi/v/:wondoner-interfaces) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 This package provides the core interfaces, abstract base classes, and standard data models required for building plugin integrations for the **WonDoner** task aggregator. It defines the contract that all source plugins (like for Jira, GitHub, Todoist, etc.) must adhere to.
 
